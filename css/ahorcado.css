@@ -42,7 +42,7 @@ body {
   display: flex;
   padding: 5px;
   margin: 10px;
-  gap: 30px;
+  gap: 10px;
   flex-direction: column;
   flex-flow: row wrap;
   justify-content: center;
@@ -60,9 +60,46 @@ body {
   text-align: center;
   justify-content: center;
   margin: 1px;
+  margin-bottom: 10px;
   transition-timing-function: linear;
   transition-delay: 0.1s;
   order: 1;
+}
+
+#imagenPerdedor{
+  background-image: url(../img/perdedor_1.png);
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  display: none;
+  height: 500px;
+  width: 300px;
+  line-height: 120px;
+  text-align: center;
+  justify-content: center;
+  margin: 1px;
+  margin-bottom: 10px;
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+  order: 1;
+  z-index: 20;
+}
+
+#imagenGanador {
+  background-image: url(../img/ganador.png);
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  display: none;
+  height: 500px;
+  width: 300px;
+  line-height: 120px;
+  text-align: center;
+  justify-content: center;
+  margin: 1px;
+  margin-bottom: 10px;
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+  order: 1;
+  z-index: 20;
 }
 
 #palabra_adivinar{
@@ -101,23 +138,21 @@ body {
   font-family: "Nightcore Demo";
   order: 3;
 }
-/*
+
 #contador {
-  display: inline-block;
+  display: flex;
   position: relative;
   font-size: 26px;
   text-align: center;
   color: rgb(255, 255, 255);
-  vertical-align: bottom;
-  margin-right: 3px;
-  top: 450px;
-  left: 250px;
+  margin-left: 280px;
+  margin-top: -150px;
   text-shadow: 10px 10px 20px rgb(187, 17, 17);
   -webkit-text-stroke: 2px rgb(250, 246, 246);
   color: transparent;
   order: 4;
-  z-index: 100;
-}*/
+  z-index: 10;
+}
 
 
 #teclado{ 
