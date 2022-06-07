@@ -1,0 +1,144 @@
+:root {
+  --colorTextos: #8dc9e6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  z-index: 1;
+}
+
+@font-face {
+  font-family: "DoctorTerror";
+  src: url(../fonts/DoctorTerror.otf);
+
+  font-family: "Melted Monster";
+  src: url(../fonts/MeltedMonster.ttf);
+
+  font-family: "BloodLust";
+  src: url(../fonts/BloodLust.ttf);
+
+  font-family: "Nightcore Demo";
+  src: url(../fonts/NightcoreDemo.ttf);
+}
+
+
+body {
+  
+  background-image: url(../img/Background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover auto;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;          /* optional */
+  -webkit-font-smoothing: antialiased;
+
+}
+
+#container-flex{
+  border: 1px solid rgb(255, 255, 255);
+  display: flex;
+  padding: 5px;
+  margin: 10px;
+  gap: 30px;
+  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+
+#imagenAhorcado{
+  background-image: url(../img/Original_2.png);
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  height: 460px;
+  width: 300px;
+  line-height: 120px;
+  text-align: center;
+  justify-content: center;
+  margin: 1px;
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+  order: 1;
+}
+
+#palabra_adivinar{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: rgb(82, 7, 7);
+  text-shadow: 10px 10px 20px rgb(187, 17, 17);
+  font-family: "Melted Monster", "BloodLust", "Nightcore Demo", "DoctorTerror";
+}
+
+#palabra_adivinar span {
+  display: inline-block;
+  position: relative;
+  font-size: 1.5em;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+  width: 30px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  vertical-align: bottom;
+  margin-right: 3px;
+  top: 55px;
+  order: 2;
+}
+
+#jugar {
+  background-image: url(../img/Background.jpg);
+  border-radius: 8px;
+  border: 1px solid rgb(131, 125, 125);
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 32px;
+  font-family: "Nightcore Demo";
+  order: 3;
+}
+/*
+#contador {
+  display: inline-block;
+  position: relative;
+  font-size: 26px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  vertical-align: bottom;
+  margin-right: 3px;
+  top: 450px;
+  left: 250px;
+  text-shadow: 10px 10px 20px rgb(187, 17, 17);
+  -webkit-text-stroke: 2px rgb(250, 246, 246);
+  color: transparent;
+  order: 4;
+  z-index: 100;
+}*/
+
+
+#teclado{ 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  height: 100%;
+  align-items: space-between;
+  justify-content: center;
+  order: 5;
+}
+
+#teclado button {
+  display: none;
+  border-radius: 8px;
+  border: 3px outset #ffffff;
+  font-size: 18px;
+  height: 30px;
+  width: 30px;
+  margin: 2px;
+  border-color: rgba(29, 26, 26, 0.8);
+  background-color: rgba(250, 244, 244, 0.5);
+  font-family: "Melted Monster", "BloodLust", "Helvetica Neue", Helvetica, Arial;
+}
