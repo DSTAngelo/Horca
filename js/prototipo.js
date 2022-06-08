@@ -84,7 +84,8 @@ function comprobar_botones(event) {
       span("contador").style.display = "none"; //ocultar contador
       manejarTitulo();
       Inicio_de_Parametros();
-      contar.innerHTML = vidas;
+      //contar.innerHTML = vidas;
+      contar.innerHTML = "Vidas: " + (vidas - errores);
     }
   }
   if (verificador == false) {
@@ -101,7 +102,8 @@ function comprobar_botones(event) {
       span("imagenPerdedor").style.display = "block"; //mostrar imagen perdedor
       span("palabra_adivinar").innerHTML = palabra;
       span("contador").style.display = "none"; //ocultar contador
-      contar.innerHTML = vidas;
+      //contar.innerHTML = vidas;
+      contar.innerHTML = "Vidas: " + (vidas - errores);
       manejarTitulo();
       Inicio_de_Parametros();
       silenciar();
