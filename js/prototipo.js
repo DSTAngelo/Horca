@@ -149,16 +149,30 @@ function silenciar() {
 
 function cargaDePalabras(x) {
   const listado = [
-    "CASA",
-    "PERRO",
-    "GATO",
-    "ELEFANTE",
-    "GALLINA",
-    "VACA",
-    "LORO",
-    "CABALLO",
-    "CERDO",
-    "CONEJO",
+    "KRUEGER",
+    "JASON",
+    "MYERS",
+    "HANNIBAL",
+    "CHUCKY",
+    "PINHEAD",
+    "JIGSAW",
+    "SAMARA",
+    "IT",
+    "DAMIEN",
+    "ANNIES",
+    "CARRIE",
+    "DRACULA",
+    "ALIEN",
+    "SADAKO",
+    "INHOTEP",
+    "PREDATOR",
+    "PUPPET",
+    "PALEMAN",
+    "HELSING",
+    "TRISTANA",
+    "KONG",
+    "CANDYMAN",
+    
   ];
 
   palabra_Buscar = listado[Math.floor(Math.random() * listado.length)];
