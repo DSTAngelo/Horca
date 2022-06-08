@@ -15,19 +15,13 @@ for (let i = 0; i < botones_teclado.length; i++) {
 }
 
 // Inicio de funciones para habilitar y deshabilitar los botones primera vez
-/*
-function manejarTituloInicio() {
-  span("palabra_adivinar").style.position = "relative";
-  span("palabra_adivinar").style.top = "35px";
-}*/
+
 
 function manejarTitulo() {
-  span("contador").style.display = "none";
-  span("palabra_adivinar").style.position = "relative";
-  span("palabra_adivinar").style.top = "20px";
+
   span("palabra_adivinar").style.fontSize = "30px";
-  Inicio_de_Parametros();
-  
+  span("palabra_adivinar").style.color = "red";
+
 }
 
 function InicioTeclados() {
@@ -38,7 +32,7 @@ function InicioTeclados() {
   const botones_jugar = document.querySelector("#jugar");
   for (let i = 0; i < botones_teclado.length; i++) {
     botones_teclado[i].disabled = false;
-    botones_teclado[i].style.display = "block";
+    botones_teclado[i].style.display = "inline-block";
   }
   botones_jugar.disabled = true;
   botones_jugar.style.display = "none";
@@ -50,7 +44,6 @@ function comenzar() {
   cargaDePalabras();
   InicioTeclados();
   span("contador").style.display = "flex";
-  //manejarTituloInicio();
   imagen.src = "../img/original_2.png";
   imagen.style.backgroundPosition = -1500 + "px 0";
   aciertos = 0;
@@ -89,7 +82,7 @@ function comprobar_botones(event) {
       span("imagenGanador").style.display = "block"; //mostrar imagen ganador
       span("palabra_adivinar").innerHTML = palabra;
       span("contador").style.display = "none"; //ocultar contador
-      //manejarTitulo();
+      manejarTitulo();
       Inicio_de_Parametros();
       contar.innerHTML = vidas;
     }
@@ -98,7 +91,7 @@ function comprobar_botones(event) {
     errores++;
     span("imagenAhorcado").style.backgroundPosition = -(300 * errores) + "px 0";
     console.log("errores: " + errores);
-    contar.innerHTML = vidas - errores;
+    contar.innerHTML = ("Vidas: " + (vidas - errores));
     console.log("Vidas: " + (vidas - errores));
 
     
@@ -109,7 +102,7 @@ function comprobar_botones(event) {
       span("palabra_adivinar").innerHTML = palabra;
       span("contador").style.display = "none"; //ocultar contador
       contar.innerHTML = vidas;
-     // manejarTitulo();
+      manejarTitulo();
       Inicio_de_Parametros();
       silenciar();
       
@@ -180,8 +173,7 @@ function cargaDePalabras(x) {
 // FUNCION CARGAR PARAMETROS -----------------------------------------//
 
 function Inicio_de_Parametros() {
-  span("contador").style.display = "flex";
-
+  
   vidas = 5;
   errores = 0;
   aciertos = 0;
@@ -195,6 +187,7 @@ function Inicio_de_Parametros() {
   }
   botones_jugar.disabled = false;
   botones_jugar.style.display = "block";
+  contar.innerHTML = "Vidas: " + (vidas - errores);
 }
 
 // ------------------FUNCION INICIAR JUEGO------------------------------ //

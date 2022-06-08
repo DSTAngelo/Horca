@@ -42,18 +42,21 @@ body {
   display: flex;
   padding: 5px;
   margin: 10px;
-  gap: 10px;
+  gap: 20px;
   flex-direction: column;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
-  
+  height: 100%;
 }
 
+
 #imagenAhorcado{
+  
   background-image: url(../img/Original_2.png);
   border: 4px solid rgb(255, 255, 255);
   border-radius: 5px;
+  display:inline-block;
   height: 460px;
   width: 300px;
   line-height: 120px;
@@ -63,7 +66,7 @@ body {
   margin-bottom: 10px;
   transition-timing-function: linear;
   transition-delay: 0.1s;
-  order: 1;
+  order: 2;
 }
 
 #imagenPerdedor{
@@ -80,7 +83,7 @@ body {
   margin-bottom: 10px;
   transition-timing-function: linear;
   transition-delay: 0.1s;
-  order: 1;
+  order: 2;
   z-index: 20;
 }
 
@@ -98,7 +101,7 @@ body {
   margin-bottom: 10px;
   transition-timing-function: linear;
   transition-delay: 0.1s;
-  order: 1;
+  order: 2;
   z-index: 20;
 }
 
@@ -121,8 +124,8 @@ body {
   color: rgb(255, 255, 255);
   vertical-align: bottom;
   margin-right: 3px;
-  top: 55px;
-  order: 2;
+  top: 60px;
+  order: 1;
 }
 
 #jugar {
@@ -131,7 +134,7 @@ body {
   border: 1px solid rgb(131, 125, 125);
   display: block;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 2px;
   margin-bottom: 8px;
   text-align: center;
   font-size: 32px;
@@ -139,30 +142,18 @@ body {
   order: 3;
 }
 
-#contador {
-  display: flex;
-  position: relative;
-  font-size: 26px;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  margin-left: 280px;
-  margin-top: -150px;
-  text-shadow: 10px 10px 20px rgb(187, 17, 17);
-  -webkit-text-stroke: 2px rgb(250, 246, 246);
-  color: transparent;
-  order: 4;
-  z-index: 10;
-}
+
 
 
 #teclado{ 
   display: flex;
   flex-wrap: wrap;
-  gap: 1px;
+  gap: 2px;
   height: 100%;
   align-items: space-between;
   justify-content: center;
   order: 5;
+  margin: 2px;
 }
 
 #teclado button {
@@ -175,5 +166,46 @@ body {
   margin: 2px;
   border-color: rgba(29, 26, 26, 0.8);
   background-color: rgba(250, 244, 244, 0.5);
+   transition: all 1s ease;
   font-family: "Melted Monster", "BloodLust", "Helvetica Neue", Helvetica, Arial;
+}
+
+#teclado button:hover {
+  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
+  background: rgb(82, 7, 7);
+}
+
+#container-flex-Dos{
+  border: 1px solid rgb(97, 131, 243);
+  display: flex;
+  padding: 5px;
+  
+  gap: 10px;
+  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+#contador{
+  color: #fff;
+  font-size: 26px;
+  display: none;
+
+}
+
+#pie{
+  border: 1px solid rgb(27, 27, 27);
+  background-color: rgba(27, 27, 27, 0.5);
+  display: flex;
+  padding: 5px;
+  margin: 1px;
+  color: #fff;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
 }
