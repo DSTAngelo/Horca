@@ -172,7 +172,6 @@ function cargaDePalabras(x) {
     "TRISTANA",
     "KONG",
     "CANDYMAN",
-    
   ];
 
   palabra_Buscar = listado[Math.floor(Math.random() * listado.length)];
